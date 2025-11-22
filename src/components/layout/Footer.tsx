@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { GraduationCap, Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
+import enliteLogo from "@/assets/enlite-logo.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -10,14 +11,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand Section */}
           <div className="space-y-4">
-            <div className="flex items-center gap-2">
-              <div className="bg-primary rounded-lg p-2">
-                <GraduationCap className="h-6 w-6 text-primary-foreground" />
-              </div>
-              <span className="text-lg font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                Enlite Education
-              </span>
-            </div>
+            <Link to="/">
+              <img 
+                src={enliteLogo} 
+                alt="Enlite Education - Enlightening Future Kids" 
+                className="h-12 w-auto"
+              />
+            </Link>
             <p className="text-sm text-muted-foreground">
               Creating quality educational content and books from Nursery to Grade 12.
             </p>
